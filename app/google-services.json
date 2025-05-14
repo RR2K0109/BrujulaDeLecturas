@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "93370700368",
+    "project_id": "brujuladelecturasapp",
+    "storage_bucket": "brujuladelecturasapp.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93370700368:android:8bed475d08f7e6956cb755",
+        "android_client_info": {
+          "package_name": "com.example.brujuladelecturas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI4kJN23jjsflEIanDO1xfW5q9Dl2tEmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

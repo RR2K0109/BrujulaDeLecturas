@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewEmojisPortada"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:gravity="center"
+        android:textSize="50sp"
+        tools:text="📚✨🌌🧙‍♂️🐉"
+        android:padding="16dp"
+        android:background="@drawable/borde_emoji_container" app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Representación emoji del libro recomendado"/>
+
+    <TextView
+        android:id="@+id/textViewLibroTituloPagina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        tools:text="Título del Libro Increíblemente Largo"
+        android:textAppearance="?attr/textAppearanceHeadline5"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintTop_toBottomOf="@id/textViewEmojisPortada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewLibroAutorPagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        tools:text="Autor Famoso del Libro"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        app:layout_constraintTop_toBottomOf="@id/textViewLibroTituloPagina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/textViewLibroPalabrasClavePagina"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="Palabras Clave: Aventura, Misterio, IA"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:gravity="center_horizontal"
+        android:ellipsize="end"
+        android:maxLines="2"
+        app:layout_constraintTop_toBottomOf="@id/textViewLibroAutorPagina"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layoutSinopsisPagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackground"
+        app:layout_constraintTop_toBottomOf="@id/textViewLibroPalabrasClavePagina"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageViewIconoLibroPagina"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/ic_menu_book" /> <TextView
+        android:id="@+id/textViewAccesoSinopsisPagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Ver sinopsis"
+        android:textColor="?attr/colorPrimary"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageViewCorazonPagina"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        app:srcCompat="@drawable/ic_favorite_border" app:layout_constraintEnd_toStartOf="@id/textViewNumeroCorazonesPagina"
+        app:layout_constraintTop_toTopOf="@id/layoutSinopsisPagina"
+        app:layout_constraintBottom_toBottomOf="@id/layoutSinopsisPagina"
+        android:layout_marginEnd="4dp"/>
+
+    <TextView
+        android:id="@+id/textViewNumeroCorazonesPagina"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="3"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageViewCorazonPagina"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewCorazonPagina" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

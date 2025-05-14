@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PreRegistroGustosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textViewTituloPreRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuéntanos sobre tus gustos literarios"
+            android:textAppearance="?attr/textAppearanceHeadline5"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Qué géneros literarios disfrutas leer habitualmente?"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:layout_marginBottom="8dp"/>
+        <CheckBox android:id="@+id/cbGeneroFantasia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fantasía"/>
+        <CheckBox android:id="@+id/cbGeneroCienciaFiccion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ciencia Ficción"/>
+        <CheckBox android:id="@+id/cbGeneroMisterioThriller" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Misterio y Thriller"/>
+        <CheckBox android:id="@+id/cbGeneroFilosofia" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Filosofía"/>
+        <CheckBox android:id="@+id/cbGeneroRomanceDrama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Romance y Drama"/>
+        <CheckBox android:id="@+id/cbGeneroHistorica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Histórica"/>
+        <CheckBox android:id="@+id/cbGeneroTerrorSuspenso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Terror y suspenso"/>
+        <CheckBox android:id="@+id/cbGeneroClasicaContemporanea" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Literatura Clásica y Contemporánea"/>
+        <View android:layout_width="match_parent" android:layout_height="16dp"/> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cuáles son tus autores favoritos?"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginBottom="8dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldAutores"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Gabriel García Márquez, Jane Austen"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextAutores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Cuáles son tus libros favoritos?"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:layout_marginBottom="8dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textFieldLibrosFavoritos"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: Cien años de soledad, Orgullo y Prejuicio"
+            android:layout_marginBottom="16dp">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextLibrosFavoritos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¿Qué buscas principally en un libro?"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:layout_marginBottom="8dp"/>
+        <CheckBox android:id="@+id/cbBusquedaAventura" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Aventura y Exploración de Mundos"/>
+        <CheckBox android:id="@+id/cbBusquedaIntriga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tramas con Intrigas y Secretos"/>
+        <CheckBox android:id="@+id/cbBusquedaDesarrolloPersonal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Desarrollo Personal y Superación"/>
+        <CheckBox android:id="@+id/cbBusquedaTemasSociales" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Temas Sociales y Crítica a la Realidad"/>
+        <CheckBox android:id="@+id/cbBusquedaAmorRelaciones" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Amor, Relaciones y Drama Humano"/>
+        <CheckBox android:id="@+id/cbBusquedaHistoriaPolitica" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Historia o Política"/>
+        <CheckBox android:id="@+id/cbBusquedaMagiaSeres" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Magia o Seres Fantásticos"/>
+        <CheckBox android:id="@+id/cbBusquedaDivulgacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Divulgación científica"/>
+        <View android:layout_width="match_parent" android:layout_height="16dp"/> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Qué tipo de experiencia emocional buscas generalmente en un libro?"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginBottom="8dp"/>
+        <CheckBox android:id="@+id/cbEmocionAlegria" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alegría / Humor"/>
+        <CheckBox android:id="@+id/cbEmocionReflexion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Reflexión / Profundidad"/>
+        <CheckBox android:id="@+id/cbEmocionSuspenso" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Suspenso / Tensión"/>
+        <CheckBox android:id="@+id/cbEmocionEmocionDrama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Emoción / Drama"/>
+        <CheckBox android:id="@+id/cbEmocionRelajacion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Relajación / Calma"/>
+        <CheckBox android:id="@+id/cbEmocionInspiracion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Inspiración / Motivación"/>
+        <CheckBox android:id="@+id/cbEmocionSorpresa" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sorpresa / Intriga"/>
+        <CheckBox android:id="@+id/cbEmocionCuriosidad" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Curiosidad / Aprendizaje"/>
+        <View android:layout_width="match_parent" android:layout_height="16dp"/> <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿En qué formato prefieres leer habitualmente?"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        android:layout_marginBottom="8dp"/>
+        <RadioGroup
+            android:id="@+id/radioGroupFormato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+            <RadioButton
+                android:id="@+id/radioButtonFisico"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Físico"
+                android:layout_marginEnd="16dp"/>
+            <RadioButton
+                android:id="@+id/radioButtonDigital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digital"
+                android:layout_marginEnd="16dp"/>
+            <RadioButton
+                android:id="@+id/radioButtonAmbosFormatos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ambos"/>
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/buttonGuardarPreferencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Guardar Preferencias y Continuar"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

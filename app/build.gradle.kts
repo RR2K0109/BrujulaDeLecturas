@@ -1,3 +1,6 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -10,21 +13,37 @@ plugins {
 }
 
 android {
-
     buildFeatures {
         viewBinding = true
+        compose = true // Si ya lo tenías en otro bloque buildFeatures, muévelo aquí
+        buildConfig = true // <--- AÑADE O ASEGURA QUE ESTA LÍNEA ESTÉ PRESENTE Y SEA TRUE
     }
+
     namespace = "com.example.brujuladelecturas"
     compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.brujuladelecturas"
-        minSdk = 24
+        minSdk = 26
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // Para acceder a la API Key desde el código de forma segura
+        // Primero, lee la propiedad desde local.properties
+        val apiKeyProperties = Properties() // Usa Properties() directamente
+        val localPropertiesFile = project.rootProject.file("local.properties")
+        if (localPropertiesFile.exists()) {
+            // Usa FileInputStream() directamente y envuélvelo en .use para seguridad
+            FileInputStream(localPropertiesFile).use { inputStream ->
+                apiKeyProperties.load(inputStream)
+            }
+        }
+
+        buildConfigField("String", "GEMINI_API_KEY", "\"${apiKeyProperties.getProperty("GEMINI_API_KEY") ?: ""}\"")
+
     }
 
     buildTypes {
@@ -60,6 +79,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.generativeai)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -79,4 +99,12 @@ dependencies {
 
     implementation("com.github.bumptech.glide:glide:4.16.0") // Revisa la última versión de Glide
 
+    implementation("com.google.ai.client.generativeai:generativeai:0.9.0") // Revisa la última versión de GenAI
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.9.0") // Verifica la última versión
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.9.0")   // Verifica la última versión
+
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
+
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.0")
 }

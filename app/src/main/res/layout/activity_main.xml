@@ -1,64 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:background="@color/entry_screen_background" tools:context=".MainActivity"
+    android:fitsSystemWindows="true">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="16dp" tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarMain"
+        android:layout_width="0dp"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary" android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbarMain"
-            android:layout_width="0dp"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            android:elevation="4dp"
-            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPagerRecomendaciones"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content" android:layout_marginTop="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            app:layout_constraintTop_toBottomOf="@id/toolbarMain"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/tabLayoutIndicator" />
-        <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayoutIndicator"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPagerRecomendaciones"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        app:tabBackground="@drawable/tab_page_indicator"
-        app:tabGravity="center"
-        app:tabIndicatorHeight="0dp"
-        app:layout_constraintTop_toBottomOf="@id/viewPagerRecomendaciones"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbarMain"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
+        app:layout_constraintBottom_toTopOf="@+id/buttonGenerarRecomendaciones"
+        android:clipToPadding="false"
+        android:clipChildren="false"
+        android:paddingStart="60dp" android:paddingEnd="60dp"   />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigationView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:background="?android:attr/windowBackground"
-            app:menu="@menu/bottom_nav_menu"
-            app:labelVisibilityMode="selected"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tabLayoutIndicator" /> </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    <ProgressBar
+        android:id="@+id/progressBarMain"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/viewPagerRecomendaciones"
+        app:layout_constraintBottom_toBottomOf="@id/viewPagerRecomendaciones"
+        app:layout_constraintStart_toStartOf="@id/viewPagerRecomendaciones"
+        app:layout_constraintEnd_toEndOf="@id/viewPagerRecomendaciones"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/buttonGenerarRecomendaciones"
+        style="@style/Widget.App.Button.Entry.Primary" android:layout_width="0dp"
+        android:layout_height="wrap_content" android:text="Generar Nuevas Recomendaciones"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEditarPreferencias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="64dp" android:layout_marginEnd="64dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/buttonEditarPreferencias"
+        style="@style/Widget.App.Button.Entry.Outlined" android:layout_width="0dp"
+        android:layout_height="wrap_content" android:text="Editar preferencias literarias"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="64dp" android:layout_marginEnd="64dp"
+        android:layout_marginBottom="38dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

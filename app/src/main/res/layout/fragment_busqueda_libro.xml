@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/entry_screen_background" android:clipToPadding="false"
+    tools:context=".fragments.BusquedaLibroFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTituloBusqueda"
+            style="@style/Widget.App.TextView.FragmentQuestionTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué buscas principalmente en un libro?" />
+        <TextView
+            android:id="@+id/textViewIndicacionBusqueda"
+            style="@style/Widget.App.TextView.FragmentIndication" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona mínimo 2 y máximo 4 opciones" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaAventura"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Aventura y Exploración de Mundos" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaIntriga"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Tramas con Intrigas y Secretos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaDesarrolloPersonal"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Desarrollo Personal y Superación" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaTemasSociales"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Temas Sociales y Crítica a la Realidad" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaAmorRelaciones"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Amor, Relaciones y Drama Humano" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaHistoriaPolitica"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Historia o Política" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaMagiaSeres"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Magia o Seres Fantásticos" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBusquedaDivulgacion"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Divulgación científica" />
+
+    </LinearLayout>
+</ScrollView>

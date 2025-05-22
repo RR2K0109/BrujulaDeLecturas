@@ -1,14 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_recomendaciones"
-        android:icon="@drawable/ic_recomendaciones"
-        android:title="Recomendaciones" />
-    <item
-        android:id="@+id/navigation_busqueda_nueva"
-        android:icon="@drawable/ic_search"
+        android:id="@+id/navigation_busqueda_nueva" android:icon="@drawable/ic_search"
         android:title="Búsqueda" />
     <item
-        android:id="@+id/navigation_perfil"
-        android:icon="@drawable/ic_perfil"
+        android:id="@+id/navigation_recomendaciones" android:icon="@drawable/ic_recomendaciones"
+        android:title="Recomendaciones" />
+    <item
+        android:id="@+id/navigation_perfil" android:icon="@drawable/ic_perfil"
         android:title="Perfil" />
 </menu>

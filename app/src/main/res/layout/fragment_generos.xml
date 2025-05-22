@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/entry_screen_background" android:clipToPadding="false" tools:context=".fragments.GenerosFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTituloGeneros"
+            style="@style/Widget.App.TextView.FragmentQuestionTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué géneros literarios disfrutas leer habitualmente?" />
+        <TextView
+            android:id="@+id/textViewIndicacionGeneros" style="@style/Widget.App.TextView.FragmentIndication" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seleccione mínimo 2 y máximo 4 opciones" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroFantasia"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Fantasía" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroCienciaFiccion"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Ciencia Ficción" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroMisterioThriller"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Misterio y Thriller" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroFilosofia"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Filosofía" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroRomanceDrama"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Romance y Drama" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroHistorica"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Histórica" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroTerrorSuspenso"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Terror y suspenso" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGeneroClasicaContemporanea"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Literatura Clásica y Contemporánea" />
+
+    </LinearLayout>
+</ScrollView>

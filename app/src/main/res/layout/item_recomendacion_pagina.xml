@@ -1,110 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content" android:padding="16dp">
+    android:layout_height="match_parent" app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
 
-    <TextView
-        android:id="@+id/textViewEmojisPortada"
-        android:layout_width="0dp"
-        android:layout_height="220dp"
-        android:gravity="center"
-        android:textSize="50sp"
-        tools:text="📚✨🌌🧙‍♂️🐉"
-        android:padding="16dp"
-        android:background="@drawable/borde_emoji_container" app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="Representación emoji del libro recomendado"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-    <TextView
-        android:id="@+id/textViewLibroTituloPagina"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        tools:text="Título del Libro Increíblemente Largo"
-        android:textAppearance="?attr/textAppearanceHeadline5"
-        android:gravity="center_horizontal"
-        android:maxLines="2"
-        android:ellipsize="end"
-        app:layout_constraintTop_toBottomOf="@id/textViewEmojisPortada"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textViewLibroAutorPagina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        tools:text="Autor Famoso del Libro"
-        android:textAppearance="?attr/textAppearanceSubtitle1"
-        app:layout_constraintTop_toBottomOf="@id/textViewLibroTituloPagina"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/textViewLibroTituloPagina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                tools:text="Título del Libro Muy Largo y Descriptivo que Puede Ocupar Varias Líneas"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="?attr/colorOnSurface"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-        android:id="@+id/textViewLibroPalabrasClavePagina"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        tools:text="Palabras Clave: Aventura, Misterio, IA"
-        android:textAppearance="?attr/textAppearanceBody2"
-        android:gravity="center_horizontal"
-        android:ellipsize="end"
-        android:maxLines="2"
-        app:layout_constraintTop_toBottomOf="@id/textViewLibroAutorPagina"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+            <TextView
+                android:id="@+id/textViewLibroAutorPagina"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Nombre del Autor del Libro"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                app:layout_constraintTop_toBottomOf="@id/textViewLibroTituloPagina"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-    <LinearLayout
-        android:id="@+id/layoutSinopsisPagina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_marginTop="16dp"
-        android:padding="8dp"
-        android:background="?attr/selectableItemBackground"
-        app:layout_constraintTop_toBottomOf="@id/textViewLibroPalabrasClavePagina"
-        app:layout_constraintStart_toStartOf="parent">
+            <TextView
+                android:id="@+id/textViewEmojisPortada"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="100dp"
+                android:gravity="center"
+                android:textSize="36sp"
+                tools:text="📚✨🌌🧙‍♂️🐉"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:background="@drawable/borde_emoji_container"
+                app:layout_constraintTop_toBottomOf="@id/textViewLibroAutorPagina"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="12dp"
+                android:contentDescription="Representación emoji del libro recomendado"/>
 
-        <ImageView
-            android:id="@+id/imageViewIconoLibroPagina"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:srcCompat="@drawable/ic_menu_book" /> <TextView
-        android:id="@+id/textViewAccesoSinopsisPagina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="Ver sinopsis"
-        android:textColor="?attr/colorPrimary"/>
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textViewLabelSinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sinopsis breve:"
+                android:textAppearance="?attr/textAppearanceCaption"
+                android:textStyle="bold"
+                android:textColor="?attr/colorOnSurfaceVariant"
+                app:layout_constraintTop_toBottomOf="@id/textViewEmojisPortada"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="16dp"/>
 
-    <ImageView
-        android:id="@+id/imageViewCorazonPagina"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        app:srcCompat="@drawable/ic_favorite_border" app:layout_constraintEnd_toStartOf="@id/textViewNumeroCorazonesPagina"
-        app:layout_constraintTop_toTopOf="@id/layoutSinopsisPagina"
-        app:layout_constraintBottom_toBottomOf="@id/layoutSinopsisPagina"
-        android:layout_marginEnd="4dp"/>
+            <TextView
+                android:id="@+id/textViewLibroSinopsisDirecta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                tools:text="Esta es una breve sinopsis del libro que explica de qué trata de manera concisa y atrapante para el lector. Debería ser lo suficientemente interesante para captar la atención y puede extenderse por varias líneas si es necesario para dar una buena idea."
+                android:textAppearance="?attr/textAppearanceBody2"
+                android:textColor="?attr/colorOnSurface"
+                android:ellipsize="end"
+                app:layout_constraintTop_toBottomOf="@id/textViewLabelSinopsis"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="8dp"/>
 
-    <TextView
-        android:id="@+id/textViewNumeroCorazonesPagina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="3"
-        android:textAppearance="?attr/textAppearanceHeadline6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/imageViewCorazonPagina"
-        app:layout_constraintBottom_toBottomOf="@id/imageViewCorazonPagina" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</com.google.android.material.card.MaterialCardView>

@@ -7,4 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="entry_button_blue_background">#4A80F5</color>
+    <color name="entry_text_on_blue">#FFFFFF</color>
+    <color name="entry_button_blue_stroke_and_text">#4A80F5</color>
+    <color name="entry_screen_background">#FFFFFF</color>
+    <color name="mi_gris_borde_textinput_default">#546E74</color>
+    <color name="text_input_color_usuario">#757575</color>
+    <color name="hint_text_color_default">#B0BEC5</color>
+    <color name="hint_text_color_default_unfocused">#757575</color>
 </resources>

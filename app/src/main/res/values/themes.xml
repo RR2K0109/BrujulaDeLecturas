@@ -1,7 +1,97 @@
-<?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Base.Theme.BrujulaDeLecturas" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/entry_button_blue_background</item>
+        <item name="colorOnPrimary">@color/entry_text_on_blue</item>
+        <item name="android:itemTextAppearance">@style/CustomPopupMenuItemTextAppearance</item>
+        <item name="actionOverflowMenuStyle">@style/CustomActionOverflowMenuStyle</item>
     </style>
 
+    <style name="CustomPopupMenuItemTextAppearance" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small"> <item name="android:textColor">@color/entry_text_on_blue</item> </style>
+
+    <style name="CustomActionOverflowMenuStyle" parent="@style/Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/entry_button_blue_background</item> </style>
+
     <style name="Theme.BrujulaDeLecturas" parent="Base.Theme.BrujulaDeLecturas" />
+
+    <style name="Widget.App.TextView.EntryTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/background_entry_title</item>
+        <item name="android:textColor">@color/entry_text_on_blue</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">32dp</item>
+        <item name="android:paddingEnd">32dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="Widget.App.Button.EntryBase" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+    </style>
+
+    <style name="Widget.App.Button.Entry.Primary" parent="Widget.App.Button.EntryBase">
+        <item name="backgroundTint">@color/entry_button_blue_background</item>
+        <item name="android:textColor">@color/entry_text_on_blue</item>
+    </style>
+
+    <style name="Widget.App.Button.Entry.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="cornerRadius">28dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="strokeColor">@color/entry_button_blue_stroke_and_text</item>
+        <item name="android:textColor">@color/entry_button_blue_stroke_and_text</item>
+    </style>
+
+    <style name="Widget.App.TextInputLayout.Entry" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/selector_textinput_box_stroke</item>
+
+        <item name="android:textColorHint">@color/hint_text_color_default_unfocused</item>
+
+        <item name="hintTextColor">@color/selector_textinput_hint_color</item>
+
+        <item name="android:textColor">@color/text_input_color_usuario</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextInputCursor" parent="">
+        <item name="colorControlActivated">@color/entry_button_blue_stroke_and_text</item>
+    </style>
+
+    <style name="Widget.App.TextView.FragmentQuestionTitle" parent="Widget.MaterialComponents.TextView">
+        <item name="android:background">@drawable/background_entry_title</item>
+        <item name="android:textColor">@color/entry_text_on_blue</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="Widget.App.TextView.FragmentIndication" parent="Widget.MaterialComponents.TextView">
+        <item name="android:textAppearance">?attr/textAppearanceCaption</item>
+        <item name="android:textColor">@color/mi_gris_borde_textinput_default</item> <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="Widget.App.Button.PreferenceSelection" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:checkable">true</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textColor">@color/selector_preference_button_text_color</item> <item name="backgroundTint">@color/selector_preference_button_background_color</item> <item name="strokeColor">@color/selector_preference_button_stroke_color</item> <item name="cornerRadius">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
 </resources>

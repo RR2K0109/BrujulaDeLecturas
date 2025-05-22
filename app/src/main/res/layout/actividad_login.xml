@@ -6,27 +6,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    android:background="@color/entry_screen_background"
-    tools:context=".RegistroActividad">
+    android:background="@color/entry_screen_background" tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textViewTituloRegistro"
-        style="@style/Widget.App.TextView.EntryTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/textViewTituloLogin"
+        style="@style/Widget.App.TextView.EntryTitle" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Crear Cuenta Nueva"
+        android:text="Iniciar Sesión"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="48dp"/>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldEmailRegistro"
+        android:id="@+id/textFieldEmailLogin"
         style="@style/Widget.App.TextInputLayout.Entry" android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Correo Electrónico"
         android:theme="@style/ThemeOverlay.App.TextInputCursor"
-        app:layout_constraintTop_toBottomOf="@id/textViewTituloRegistro"
+        app:layout_constraintTop_toBottomOf="@id/textViewTituloLogin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="32dp"
@@ -34,7 +32,7 @@
         android:layout_marginEnd="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextEmailRegistro"
+            android:id="@+id/editTextEmailLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
@@ -42,12 +40,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFieldPasswordRegistro"
+        android:id="@+id/textFieldPasswordLogin"
         style="@style/Widget.App.TextInputLayout.Entry" android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Contraseña"
         android:theme="@style/ThemeOverlay.App.TextInputCursor"
-        app:layout_constraintTop_toBottomOf="@id/textFieldEmailRegistro" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textFieldEmailLogin"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"
         app:passwordToggleEnabled="true"
@@ -55,7 +54,7 @@
         android:layout_marginEnd="32dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPasswordRegistro"
+            android:id="@+id/editTextPasswordLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -63,27 +62,25 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/buttonRegistrarse"
-        style="@style/Widget.App.Button.Entry.Primary"
-        android:layout_width="0dp"
-        android:text="Registrarse"
-        app:layout_constraintTop_toBottomOf="@id/textFieldPasswordRegistro" app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/buttonIniciarSesion"
+        style="@style/Widget.App.Button.Entry.Primary" android:layout_width="0dp"
+        android:text="Iniciar Sesión"
+        app:layout_constraintTop_toBottomOf="@id/textFieldPasswordLogin"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"/>
+        android:layout_marginStart="48dp" android:layout_marginEnd="48dp"/>
 
     <TextView
-        android:id="@+id/textViewIrALogin"
+        android:id="@+id/textViewIrARegistro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Ya tienes cuenta? Inicia Sesión"
-        android:textColor="@color/entry_button_blue_stroke_and_text"
-        android:textSize="14sp"
+        android:text="¿No tienes cuenta? Regístrate aquí"
+        android:textColor="@color/entry_button_blue_stroke_and_text" android:textSize="14sp"
         android:padding="8dp"
         android:clickable="true"
         android:focusable="true"
-        app:layout_constraintTop_toBottomOf="@id/buttonRegistrarse"
+        app:layout_constraintTop_toBottomOf="@id/buttonIniciarSesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="24dp"/>

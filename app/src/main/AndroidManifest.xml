@@ -12,23 +12,43 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BrujulaDeLecturas"
         tools:targetApi="31">
+
         <activity
-            android:name=".PreRegistroGustosActivity"
-            android:exported="false" />
-        <activity
-            android:name=".RegistroActividad"
+            android:name=".EntryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false">
+        </activity>
+
+        <activity
+            android:name=".PreRegistroStepperActivity" android:exported="false" />
+
+        <activity
+            android:name=".RegistroActividad"
+            android:exported="false">
+        </activity>
+
         <activity
             android:name=".MainActivity"
-            android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.BrujulaDeLecturas"></activity>
+            android:exported="false" android:label="@string/app_name"
+            android:theme="@style/Theme.BrujulaDeLecturas">
+        </activity>
+
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EditarPreferenciasActivity"
+            android:exported="false"
+            android:parentActivityName=".PerfilActivity" />
     </application>
 
 </manifest>

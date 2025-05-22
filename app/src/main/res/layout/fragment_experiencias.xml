@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/entry_screen_background" android:clipToPadding="false"
+    tools:context=".fragments.ExperienciasFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textViewTituloExperiencias"
+            style="@style/Widget.App.TextView.FragmentQuestionTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Qué tipo de experiencia emocional buscas generalmente en un libro?" />
+        <TextView
+            android:id="@+id/textViewIndicacionExperiencias"
+            style="@style/Widget.App.TextView.FragmentIndication" android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selecciona mínimo 2 y máximo 4 opciones" /> <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnEmocionAlegria"
+        style="@style/Widget.App.Button.PreferenceSelection" android:text="Alegría / Humor" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionReflexion"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Reflexión / Profundidad" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionSuspenso"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Suspenso / Tensión" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionEmocionDrama"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Emoción / Drama" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionRelajacion"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Relajación / Calma" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionInspiracion"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Inspiración / Motivación" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionSorpresa"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Sorpresa / Intriga" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEmocionCuriosidad"
+            style="@style/Widget.App.Button.PreferenceSelection" android:text="Curiosidad / Aprendizaje" />
+
+    </LinearLayout>
+</ScrollView>
